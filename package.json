@@ -18,6 +18,9 @@
     "index.js",
     "rules/*.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "sh ./scripts/build.sh",
     "clean": "rm -rf ./dist",
