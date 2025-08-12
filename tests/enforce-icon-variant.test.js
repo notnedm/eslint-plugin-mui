@@ -26,12 +26,14 @@ module.exports = function () {
       },
       {
         code: "import { SettingsRounded, AddRounded } from '@mui/icons-material';",
-        output: "import { Settings, Add } from '@mui/icons-material';",
+        output:
+          "import { Settings as SettingsRounded, Add as AddRounded } from '@mui/icons-material';",
         errors: 2,
       },
       {
         code: "import { SettingsRounded, GitHub } from '@mui/icons-material';",
-        output: "import { Settings, GitHub } from '@mui/icons-material';",
+        output:
+          "import { Settings as SettingsRounded, GitHub } from '@mui/icons-material';",
         errors: 1,
       },
     ],
@@ -62,13 +64,14 @@ module.exports = function () {
       },
       {
         code: "import { Settings } from '@mui/icons-material';",
-        output: "import { SettingsRounded } from '@mui/icons-material';",
+        output:
+          "import { SettingsRounded as Settings } from '@mui/icons-material';",
         errors: 1,
       },
       {
         code: "import { Settings, Add } from '@mui/icons-material';",
         output:
-          "import { SettingsRounded, AddRounded } from '@mui/icons-material';",
+          "import { SettingsRounded as Settings, AddRounded as Add } from '@mui/icons-material';",
         errors: 2,
       },
     ],
