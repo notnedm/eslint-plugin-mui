@@ -5,7 +5,7 @@
 Enforces usage of [@mui/icons-material](https://mui.com/material-ui/material-icons/) variants when a desired variant exists, e.g.
 
 ```javascript
-/* eslint @notnedm-mui/enforce-icon-variant: ["error", "Rounded"] */
+/* eslint @notnedm/mui/enforce-icon-variant: ["error", "Rounded"] */
 
 // ✅ valid because using intended Rounded variant
 import { SettingsRounded } from "@mui/icons-material";

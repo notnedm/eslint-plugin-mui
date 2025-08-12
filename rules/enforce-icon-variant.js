@@ -1,4 +1,4 @@
-import fs from "fs";
+const fs = require("fs");
 
 const VARIANT_SUFFIX_MAP = {
   Filled: "",
@@ -8,7 +8,7 @@ const VARIANT_SUFFIX_MAP = {
   Sharp: "Sharp",
 };
 
-export default {
+module.exports = {
   meta: {
     type: "suggestion",
     fixable: "code",

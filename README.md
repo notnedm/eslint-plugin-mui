@@ -9,14 +9,12 @@ Collection of custom built ESLint rules targeted towards `@mui/*` dependencies.
 
 ```javascript
 // eslint.config.js
-const notnedMui = require("@notnedm/eslint-plugin-mui");
-
 module.exports = {
   files: ["**/*.{jsx,tsx}"],
-  plugins: { "@notnedm-mui": notnedMui },
+  plugins: ["@notnedm/eslint-plugin-mui"],
   rules: {
-    "@notnedm-mui/enforce-icon-variant": "error", // e.g. Enforced Filled (default) icon variants
-    "@notnedm-mui/enforce-icon-variant": ["error", "Rounded"], // e.g. Enforced Rounded icon variants
+    "@notnedm/mui/enforce-icon-variant": "error", // e.g. Enforced Filled (default) icon variants
+    "@notnedm/mui/enforce-icon-variant": ["error", "Rounded"], // e.g. Enforced Rounded icon variants
   },
 };
 ```

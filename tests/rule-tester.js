@@ -1,4 +1,4 @@
-import { RuleTester as EslintRuleTester } from "eslint";
+const { RuleTester: EslintRuleTester } = require("eslint");
 
 class RuleTester {
   ruleTester;
@@ -16,4 +16,4 @@ class RuleTester {
   }
 }
 
-export default RuleTester;
+module.exports = RuleTester;

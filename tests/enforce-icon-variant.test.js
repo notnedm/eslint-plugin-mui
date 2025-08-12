@@ -1,7 +1,7 @@
-import iconVariantRule from "../rules/enforce-icon-variant.js";
-import RuleTester from "./rule-tester.js";
+const iconVariantRule = require("../rules/enforce-icon-variant.js");
+const RuleTester = require("./rule-tester.js");
 
-export default function () {
+module.exports = function () {
   const filledTester = new RuleTester({
     "rule-to-test/enforce-icon-variant": "error",
   });
@@ -73,4 +73,4 @@ export default function () {
       },
     ],
   });
-}
+};

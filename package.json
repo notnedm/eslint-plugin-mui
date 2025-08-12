@@ -1,6 +1,6 @@
 {
   "name": "@notnedm/eslint-plugin-mui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collection of custom built ESLint rules targeted towards `@mui/*` dependencies.",
   "homepage": "https://github.com/notnedm/eslint-plugin-mui#readme",
   "bugs": {
@@ -11,8 +11,6 @@
     "url": "git+https://github.com/notnedm/eslint-plugin-mui.git"
   },
   "license": "GPL-3.0-only",
-  "author": "notnedm",
-  "type": "module",
   "main": "index.js",
   "files": [
     "index.js",
