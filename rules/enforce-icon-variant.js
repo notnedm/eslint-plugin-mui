@@ -1,4 +1,4 @@
-const fs = require("fs");
+const path = require("path");
 
 const VARIANT_SUFFIX_MAP = {
   Filled: "",
@@ -43,8 +43,25 @@ module.exports = {
       return `${iconName}${expectedSuffix}`;
     }
     function checkIfVariantExists(name) {
-      const iconPath = `${process.cwd()}/node_modules/@mui/icons-material/${name}.js`;
-      return fs.existsSync(iconPath);
+      const filename = context.getFilename && context.getFilename();
+      if (!filename || filename === "<text>") return false;
+
+      const basedir = path.dirname(filename);
+      try {
+        // try resolve direct filename
+        require.resolve(`@mui/icons-material/${name}.js`, { paths: [basedir] });
+        return true;
+      } catch (err) {
+        try {
+          // try resolve via rootname; looser approach
+          require.resolve(`@mui/icons-material/${name}`, {
+            paths: [basedir],
+          });
+          return true;
+        } catch {
+          return false;
+        }
+      }
     }
     return {
       ImportDeclaration(node) {
