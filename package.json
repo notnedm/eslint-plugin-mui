@@ -1,6 +1,6 @@
 {
   "name": "@notnedm/eslint-plugin-mui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of custom built ESLint rules targeted towards `@mui/*` dependencies.",
   "homepage": "https://github.com/notnedm/eslint-plugin-mui#readme",
   "bugs": {

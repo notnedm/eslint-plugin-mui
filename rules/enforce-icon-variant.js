@@ -110,10 +110,7 @@ module.exports = {
 
           context.report({
             fix(fixer) {
-              return fixer.replaceText(
-                x.imported,
-                `${expectedIconName} as ${x.imported.name}`
-              );
+              return fixer.replaceText(x.imported, expectedIconName);
             },
             message: `Use the intended ${variant === "Filled" ? "Filled (default)" : variant} variant of ${x.imported.name}.`,
             node: x.imported,
